@@ -1,0 +1,130 @@
+:root{
+    --color-main-rgb: rgba(0, 53, 94, 1);
+    --color-secondary-rgb: rgba(0, 103, 182, 1);
+
+    --color-main-private-rgb: rgba(49, 2, 54, 1);
+    --color-secondary-private-rgb: rgba(111, 9, 121, 1);
+
+    --color-bg: #23222b;
+
+    --border-radius: 8px;
+    --gap-size: 5px;
+}
+
+#main-window {
+    background: var(--color-main-rgb);
+    background: linear-gradient(135deg, var(--color-main-rgb) 29%, var(--color-secondary-rgb) 100%);
+}
+
+#main-window[privatebrowsingmode] {
+    background: var(--color-private-main-rgb);
+    background: linear-gradient(135deg, var(--color-main-private-rgb) 29%, var(--color-secondary-private-rgb) 100%);
+}
+
+#sidebar-header,
+#urlbar-background,
+#urlbarView {
+    background-color: var(--color-bg) !important;
+}
+
+#nav-bar,
+#navigator-toolbox {
+    background-color: transparent !important;
+}
+
+#navigator-toolbox {
+    display: flex;
+    flex-direction: row;
+    padding-top: var(--gap-size);
+    position: relative;
+    border: none !important;
+}
+
+[chromehidden]:not([chromehidden=""]) #navigator-toolbox,
+[sizemode="fullscreen"] #navigator-toolbox {
+    padding-top: 0 !important;
+}
+
+.titlebar-buttonbox-container {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+}
+
+#TabsToolbar-customization-target {
+    flex-direction: row-reverse;
+}
+
+#nav-bar {
+    flex-grow: 1;
+    margin-right: 140px;
+}
+
+#titlebar {
+    max-width: fit-content;
+    max-width: 75px;
+}
+
+#tabbrowser-tabs,
+.titlebar-spacer,
+#alltabs-button {
+    display: none;
+}
+
+#sidebar-button {
+    cursor: pointer;
+}
+
+#urlbar {
+    border-radius: var(--border-radius);
+    overflow: hidden;
+}
+
+#browser {
+    margin: var(--gap-size);
+}
+
+[chromehidden]:not([chromehidden=""]) #browser,
+[sizemode="fullscreen"] #browser {
+    margin: 0 !important;
+    border-radius: 0 !important;
+}
+
+#sidebar-splitter {
+    width: calc(var(--gap-size) * 2) !important;
+    border: none !important;
+}
+
+#appcontent {
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    border: none !important;
+}
+#appcontent {
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    border: none !important;
+}
+
+[chromehidden]:not([chromehidden=""]) #appcontent,
+[sizemode="fullscreen"] #appcontent {
+    margin: 0 !important;
+    border-radius: 0 !important;
+}
+
+#sidebar-box {
+    border-radius: var(--border-radius);
+    overflow: hidden;
+}
+
+
+[privatebrowsingmode] #private-browsing-indicator-with-label label {
+    display: none !important;
+}
+
+[privatebrowsingmode] #TabsToolbar {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+}
