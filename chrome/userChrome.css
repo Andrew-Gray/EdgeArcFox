@@ -5,7 +5,9 @@
     --color-main-private-rgb: rgba(49, 2, 54, 1);
     --color-secondary-private-rgb: rgba(111, 9, 121, 1);
 
+    --color-text: #fff;
     --color-bg: #23222b;
+    --hover-bg: #414142;
 
     --border-radius: 8px;
     --gap-size: 5px;
@@ -25,6 +27,10 @@
 #urlbar-background,
 #urlbarView {
     background-color: var(--color-bg) !important;
+}
+
+#sidebar-header{
+    border-bottom: none!important;
 }
 
 #nav-bar,
@@ -128,3 +134,27 @@
     flex-direction: row-reverse;
     align-items: center;
 }
+
+
+
+.sidebar-panel[lwt-sidebar] {
+    background-color: var(--color-bg) !important;
+}
+
+/*.sidebar-placesTreechildren{
+    font-size: 15px !important;
+}*/
+
+.sidebar-placesTree treechildren::-moz-tree-cell-text {
+  font-size: 15px !important;
+  color: var(--color-text) !important;
+}
+/* Pale blue background on hover or selected */
+.sidebar-placesTree treechildren::-moz-tree-row(hover),
+.sidebar-placesTree treechildren::-moz-tree-row(selected) {
+  background-color: var(--hover-bg) !important;
+}
+
+#sync-tabs-menuitem {
+    display:none !important;
+  }
